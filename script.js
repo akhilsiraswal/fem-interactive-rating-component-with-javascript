@@ -1,4 +1,3 @@
-
 let l1 = document.getElementById("one");
 let l2 = document.getElementById("two");
 let l3 = document.getElementById("three");
@@ -7,21 +6,50 @@ let l5 = document.getElementById("five");
 
 var score = 0;
 
-const onClickEventHandler = () => {
+const onClickEventHandler1 = () => {
   score = l1.value;
+  if (localStorage) {
+    localStorage.setItem("score", score);
+  }
   console.log(score);
 };
 
+const onClickEventHandler2 = () => {
+  score = l2.value;
+  if (localStorage) {
+    localStorage.setItem("score", score);
+  }
+  console.log(score);
+};
+
+const onClickEventHandler3 = () => {
+  score = l3.value;
+  if (localStorage) {
+    localStorage.setItem("score", score);
+  }
+  console.log(score);
+};
+
+const onClickEventHandler4 = () => {
+  score = l4.value;
+  if (localStorage) {
+    localStorage.setItem("score", score);
+  }
+  console.log(score);
+};
+
+const onClickEventHandler5 = () => {
+  score = l5.value;
+  if (localStorage) {
+    localStorage.setItem("score", score);
+  }
+  console.log(score);
+};
 
 let button = document.getElementsByClassName("button_submit")[0];
-console.log(button)
+console.log(button);
 button.addEventListener("click", function onSubmit(e) {
-  e.preventDefault();
-  console.log("hii");
+  // e.preventDefault();
+  // console.log("hii");
   window.location.href = "feedback.html";
-  e.preventDefault();
-
-  let p_tag = document.querySelector("rating_p_tag");
-  console.log(p_tag);
-  p_tag.textContent = `You Selected ${score} out of 5`;
 });
